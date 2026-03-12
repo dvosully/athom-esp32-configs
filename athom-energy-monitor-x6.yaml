@@ -362,7 +362,7 @@ sensor:
             id(id_Energy_1_lastvalue) = id(Energy_1).state;
           }
           float delta =  x - id(id_Energy_1_lastvalue);
-          if(id(Power_1) > 0)
+          if(id(Power_1).state > 0)
           {
             id(id_Energy_1_persist) += delta;
           }
@@ -381,7 +381,7 @@ sensor:
             id(id_Energy_Export_1_lastvalue) = id(Energy_1).state;
           }
           float delta =  x - id(id_Energy_Export_1_lastvalue);
-          if(id(Power_1) < 0)
+          if(id(Power_1).state < 0)
           {
             id(id_Energy_Export_1_persist) += delta;
           }
